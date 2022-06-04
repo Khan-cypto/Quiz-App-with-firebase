@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.8.1/firebase-database.js"></script>
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+	<title>Quiz Application</title>
+</head>
+
+<body onload="displayQuestion(0)">  <!-- //run this function when page loaded -->
+
+
+		<div class="jumbotron text-center">
+			<h2 class="display-3">Real Time Quiz Application</h2>	
+		</div>
+
+		<div class="container">
+	  		<div class="row">
+	  		<div class="col-md-1"></div>
+	  		<div class="col-md-10">
+	  
+		    <div class="card">
+		      <div class="card-header">
+		      	<div id="header" class="d-inline-block"><b>Time</b></div>
+		      	<div id="timer" class="d-inline-block float-right"><b>15:00</b></div>
+		      </div>
+		      <div class="card-body">
+		      	<h3 class="card-title pb-3" id="questionElement">Q. Question one is loading...</h3>
+			      <p class="card-text optionElement p-2" onclick="addActiveClass(this)">Option 1 is loading..</p>
+			      <p class="card-text optionElement p-2" onclick="addActiveClass(this)">Option 2 is loading..</p>
+			      <p class="card-text optionElement p-2" onclick="addActiveClass(this)">Option 3 is loading..</p>
+			      <p class="card-text optionElement p-2" onclick="addActiveClass(this)">Option 4 is loading..</p>
+		      </div>
+		    
+		      <div class="card-footer text-muted text-right">
+		      	<a href="#" class="btn btn-danger" id="nextBtn">Next Question</a> <!-- onclick="nextQuestion()"-->
+		      </div>
+			</div>
+			</div>
+			</div>
+		</div>
+
+
+ <!-- The Modal -->
+  
+ <div class="display-4" id="modal">
+ 	<h3>You scored <div id="scoreValue"></div></h3>
+ 	<h2 class="text-danger" onclick="askUser()"> Go To Quiz </h2>
+ 	<!-- OR -->
+ 	<!-- <h3 id="valueScore"></h3> -->
+ </div>
+
+
+
+	<script src="app.js"></script>
+</body>
+</html>

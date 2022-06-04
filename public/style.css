@@ -1,0 +1,55 @@
+body{
+	background-color: #eff7fa;
+}
+
+.active{
+	background: springgreen;
+}
+
+p.optionElement:hover{
+	background: lightskyblue;
+}
+
+.container{
+	position: relative;
+	top: 15%;
+}
+
+.card-body{
+	background-color: ;
+}
+
+.card-body p{
+	font-size: 1.5rem;
+}
+
+.card-header{
+	background: black;
+	font-size: 1.2rem;
+	color: white;
+}
+
+ 
+#modal{
+	position: absolute;
+	top: 25%;
+	left: 15%;
+	text-align: center;
+	/*display: block;*/
+	width: 740px;
+	height: 480px;
+	border: 1px solid black;
+	background: lightblue;
+	visibility: hidden;
+	/*visibility: visible;*/
+	/*display: none;*/
+} 
+
+#modal h3{
+	position: absolute;
+	top: 35%;
+	left: 32%;
+	font-size: 3rem;
+	color: white;
+	text-shadow: 2px 2px 2px black;
+}
